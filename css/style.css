@@ -1,0 +1,23 @@
+body {
+	background-color: white;
+}
+
+.tabla{
+	width: 1200px;
+	margin:0 
+	auto;
+	text-decoration: none;
+}
+
+a:-webkit-any-link {
+    color: -webkit-link;
+    cursor: pointer;
+    text-decoration: none;
+    text-decoration-line: none;
+    text-decoration-style: none;
+    text-decoration-color: none;
+}
+
+ul { 
+	padding:0 
+} 
