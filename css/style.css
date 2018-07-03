@@ -10,7 +10,7 @@ body {
 }
 
 a:-webkit-any-link {
-    color: -webkit-link;
+	color: #000000;
     cursor: pointer;
     text-decoration: none;
     text-decoration-line: none;
@@ -21,3 +21,7 @@ a:-webkit-any-link {
 ul { 
 	padding:0 
 } 
+
+.btn btn-danger color{
+	color:white;
+}

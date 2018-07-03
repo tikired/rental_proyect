@@ -22,7 +22,16 @@ if (isset($_POST['numero_factura'])) {
     <meta charset="utf8">
     <title>Agregar Factura</title>
 </head>
+<script type="text/javascript">
+	function calcular() {
+		var totalR = eval(parseInt(document.nuevo.valorNeto.value*19)/100);
+		document.getElementById('iva').value = totalR;
 
+		var totalFinal =  eval(parseInt(totalR) + parseInt(document.nuevo.valorNeto.value));
+		document.getElementById('total').value = totalFinal;
+	}
+
+</script>
 <!-- Cuerpo de la página -->
 <body>  
     <main>
@@ -51,15 +60,15 @@ if (isset($_POST['numero_factura'])) {
 			</tr>
 			<tr>
 				<td>Valor Neto:</td>
-				<td><input type="number" name="neto" maxlength="500" required></td>
+				<td><input nombre="valorNeto" onkeyup="calcular()" id="valorNeto" type="number" name="neto" maxlength="500" required></td>
 			</tr>
 			<tr>
 				<td>Iva:</td>
-				<td><input type="number" name="iva" maxlength="500" required></td>
+				<td><input id="iva"  type="number" name="iva" maxlength="500" required readonly></td>
 			</tr>
 			<tr>
 				<td>Total:</td>
-				<td><input type="number" name="total" maxlength="500" required></td>
+				<td><input id="total" type="number" name="total" maxlength="500" required readonly></td>
 			</tr> 
 			<tr>
 				<td>Fecha de Pago:</td>

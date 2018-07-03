@@ -65,10 +65,10 @@ $resultado = $bd->query($sql);
 				    <td><?php echo $fila['FECHA_PAGO']; ?></td>
 				    <td><?php echo $fila['ESTADO']; ?></td>
                     <td>
-                        <a class="btn btn-primary" href="modificar.php?id=<?php echo $fila['NUMERO_FACTURA']; ?>">Modificar</a>
+                        <a style="color: white;" class="btn btn-primary" href="modificar.php?id=<?php echo $fila['NUMERO_FACTURA']; ?>">Modificar</a>
                     </td>
                     <td>
-						<a class="btn btn-danger" href="eliminar.php?id=<?php echo $fila['NUMERO_FACTURA']; ?>" onclick="javascript:return confirmar();">Eliminar</a>
+						<a style="color: white;" class="btn btn-danger" href="eliminar.php?id=<?php echo $fila['NUMERO_FACTURA']; ?>" onclick="javascript:return confirmar();">Eliminar</a>
                     </td>
                 </tr>
 				<?php
